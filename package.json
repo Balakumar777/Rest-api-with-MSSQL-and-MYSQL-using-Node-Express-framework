@@ -1,0 +1,17 @@
+{
+  "name": "express_rest",
+  "version": "1.0.0",
+  "description": "Building a rest API with express and MYSQL|MSSQL",
+  "main": "expressRest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mssql": "^8.1.0",
+    "mysql": "^2.18.1"
+  },
+  "author": "Bala",
+  "license": "ISC"
+}
