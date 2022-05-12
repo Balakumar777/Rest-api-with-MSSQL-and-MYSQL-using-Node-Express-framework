@@ -78,20 +78,3 @@ exports.deleteUser = function(req, res) {
 	    }
 	})()
 };
-
-exports.contactSave = function(req, res) {
-	sql.close();
-	(async function () {
-	    try {
-	    	let status = {code:"200",message:"Success"}
-	        let pool = await sql.connect(config)
-			await pool.request().input('name',req.body.data.name).input('surName',req.body.data.surName).input('created',req.body.data.created).input('email',req.body.data.email).input('zip',parseInt(req.body.data.zip)).input('address',req.body.data.address).query(`insert into userDetails(name,surName,created,email,zip,address)values(@name,@surName,@created,@email,@zip,@address)`, function () {
-	       		res.send(status);
-	        });
-	    } catch (err) {
-	    	let status = {code:"500",error:err}
-	    	console.log(err)
-	        res.send(err)
-	    }
-	})()
-};
