@@ -6,8 +6,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var router = require('./mssql.js');
 
-app.post('/api/contactSave',router.contactSave);
-
 app.get('/api/selectUser', router.index);
 
 app.get('/api/selectUserId/:id', router.selectUserId);
